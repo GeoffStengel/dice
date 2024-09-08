@@ -82,8 +82,12 @@ WSGI_APPLICATION = 'table.wsgi.application'
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #}
 
+#DATABASES = {
+#    'default': dj_database_url.config(default='sqlite:///db.sqlite3')  # Use SQLite for local development
+#}  
+
 DATABASES = {
-    'default': dj_database_url.config(default='sqlite:///db.sqlite3')  # Use SQLite for local development
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 }
 
 # Password validation
