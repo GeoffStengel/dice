@@ -30,9 +30,10 @@ DEBUG = os.environ.get('DEBUG', 'True') == 'True'  # Ensure DEBUG is a boolean
 #We Added This For Your .env Files To Stay Secure
 ADMIN_URL = os.environ.get('ADMIN')
 #We Added This For Your .env Files To Stay Secure
-ALLOWED_HOSTS = ['HOSTS']
+#ALLOWED_HOSTS = ['HOSTS']
 #ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
+#ALLOWED_HOSTS = os.environ.get('HOSTS', '').split(',')
 # Application definition
 
 INSTALLED_APPS = [
