@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-DEBUG = os.environ.get('DEBUG', 'True') == 'True'  # Ensure DEBUG is a boolean
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'  # Ensure DEBUG is a boolean
 ADMIN_URL = os.environ.get('ADMIN')
 #We Added This For Your .env Files To Stay Secure
 
