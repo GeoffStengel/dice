@@ -1,0 +1,95 @@
+/***CSS For Main base.html Page***/
+*{
+    margin: 0;
+    padding: 0;
+    }
+    
+    /***Body Of The Website***/
+    body{
+        background: #c5d0e4;
+        width: 100%;
+        height: 100vh;
+        font-family: monospace;
+    }
+    
+    
+    /**Nav Bar**/
+    nav {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        background: #6792e2; 
+        text-align: center;
+        justify-content: center;
+        font-size: 16px;
+        margin: 0 auto;
+    }
+    
+    /**Tag Line Or Business Name**/
+    .nav-logo{
+        text-align: center;
+        max-height: 100%;
+        padding: 2px;
+        text-decoration: none;
+        color: black;
+        grid-column: 4;
+    }
+    
+    /***Nav Buttons At Top Of Website***/
+    .nav-buttons {
+        max-height: 100%;
+        padding: 2px;
+        text-justify: center;
+        text-decoration: none;
+        margin: 0 auto;
+    }
+    
+h1{
+    font-size: 22px;
+    font-family: monospace;
+    margin: 0 auto;
+}
+
+    /***Container Wraps Block Content And Main Section***/
+    .container{
+        display: grid;
+        max-width: 600px;
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px;
+        background: #b1c3e3;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    /***Grid On Home Page Hold main content***/
+    .homepage_content_grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30% 70%;
+        height:98%;
+        width:100%;
+        margin:0 auto;
+        justify-self: center;
+        align-self: center;
+
+    }
+
+
+    .info_grid{
+        display: grid;
+        height:100%;
+        width:100%;
+        margin:0 auto;
+    }
+
+    .image_grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height:100%;
+        width:100%;
+        margin:0 auto;
+    }
