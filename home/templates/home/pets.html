@@ -4,7 +4,7 @@
   
     {% block title %} Adopt A New Friend {% endblock title %}
 
- 
+
 <!-- Pet Profiles Section -->
 
     {% block content %}
@@ -17,7 +17,7 @@
                     <div class="puppy_item">
                         <img src="{{ pet.pet_prof_img.url }}" alt="Puppy Profile Pics">
                             <p class="pet_name">{{ pet.name }}</p>
-                            <p class="pet_description">{{ pet.description }}</p>
+                            <p class="pet_title">{{ pet.title }}</p>
                     </div>
                 
                 {% endfor %}

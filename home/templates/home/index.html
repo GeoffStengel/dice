@@ -10,7 +10,6 @@
         <div class="info_grid">
             {% for item in all %}
                 <a class="adoption_discount" href="#">{{ item.sale_banner }}</a>
-                
             {% endfor%}
 
                     <!--Header-Image-Banner-Start-->
@@ -47,33 +46,29 @@
                         {% endfor %}
                     </div>
                     <!-- Optional: Dots for slideshow-Start-->
-                    
+                
+                <!--2nd-Large-Body-Of-Text-Also-Has-Image-START-->    
                 <div class='home_description'>
-                {% for text_body in all %} <p>{{ text_body.body_text }}</p> {% endfor %}
-                <!-- <p>
-                    Hi there, human! I’m Max, a scruffy rescue pup with a big heart, and I’m here to tell you all about this pawsitively amazing site that helps dogs like me find loving forever homes!
-                </p>
-                <p>      
-Imagine a place where all my furry friends and I can wag our tails with excitement, hoping for a chance to snuggle up with a new family. This site is like a magical bridge connecting kind-hearted humans with us lovable rescue pups. From tiny terriers to big, goofy golden retrievers, we’re all here, just waiting for a chance to be part of your pack!
-</p>
-<p>
-When you explore the site, you’ll meet all sorts of awesome dogs who have been saved from tough times and are now ready to bring joy and companionship into your life. You can browse through our photos, read our stories, and find out what makes each of us special. Whether you’re looking for a playful sidekick, a gentle cuddle buddy, or a loyal companion, you’ll find us wagging our tails and ready to love you unconditionally.
-</p>
-<p>
-And let’s not forget the special adoption events and heartwarming success stories! When one of us finds our forever home, it’s a celebration filled with barks, tail wags, and happy tears.
-</p>
-<p>
-So come on in, explore, and who knows? You just might find your new best friend right here. Together, we can make the world a better place, one paw at a time!
-</p>-->
+                <div class="body_text1">    
+                    {% for text_body in all %} <p>{{ text_body.body_text1 }}</p> {% endfor %}
+                </div>
+                <div class="body_text2">
+                    {% for text_body in all %} <p>{{ text_body.body_text2 }}</p> {% endfor %}
+                    
+                        <img class="body_text2_img" src="{{ all.0.body_text2_img.url }}" alt="Doggy Image">
+                     
+                </div>
+                <!--2nd-Large-Body-Of-Text-Also-Has-Image-END-->      
+ 
 </div>         
 
                 <!-- Pet Profiles Section -->
-                <div class="puppy_grid">
+                <div class="puppy_grid_6_img">
                     {% for pet in six_pets %}
                         <div class="puppy_item">
                             <img src="{{ pet.pet_prof_img.url }}" alt="Puppy Pic 1">
                                 <p class="pet_name">{{ pet.name }}</p>
-                                <p class="pet_description">{{ pet.description }}</p>
+                                <p class="pet_title">{{ pet.title }}</p>
                         </div>
                     {% endfor %}
                 </div>

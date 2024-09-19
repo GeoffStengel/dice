@@ -4,15 +4,17 @@ from django.db import models
 
 class HomePage(models.Model):
     sale_banner = models.CharField(max_length=100)
-    body_text = models.TextField()
+    body_text1 = models.TextField()
+    body_text2 = models.TextField(default='Hello')
     date = models.DateTimeField(auto_now_add=True)
     lrg_banner = models.ImageField(upload_to='banners/', blank=False, null=False, default='banners/default.jpg')
     lrg_banner_2 = models.ImageField(upload_to='banners/', blank=False, null=False, default='banners/default.jpg')
     lrg_banner_3 = models.ImageField(upload_to='banners/', blank=False, null=False, default='banners/default.jpg')
-
+    body_text2_img = models.ImageField(upload_to='banners/', blank=False, null=False, default='banners/default.jpg')
 
 class AboutPage(models.Model):
-    body_text = models.TextField()
+    body_text1 = models.TextField()
+    body_text2 = models.TextField(default='Hello')
 
 
 class PetProfile(models.Model):
@@ -22,6 +24,7 @@ class PetProfile(models.Model):
         ('bird', 'Bird'),
     ]
     name = models.CharField(max_length=50)
+    title = models.CharField(max_length=50, default='Sparky Needs A Title')
     description = models.CharField(max_length=100)
     located = models.CharField(max_length=50)
     pet_prof_img = models.ImageField(upload_to='ppi/', blank=False, null=False, default='ppi/pet_default.jpg')
