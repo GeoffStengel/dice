@@ -1,19 +1,14 @@
 <!--about.html Page For Website-->
 {% extends "home/base.html" %}
-{% block title %}<title>Hello World</title>{% endblock title %}   
+{% block title %}<title>About Us</title>{% endblock title %}   
     <!--Content Block Blocks Other Content From base.html-->
-{% block content%}
 
+{% block content %}
  <h1>About Us</h1>  
  
-
  <div class='about_body_description'>
-
-  {% for about_body in about_page %}
-    <p>{{ about_body.body_text }}</p>
-  {% endfor %}
+  <p>{{ about_page.body_text1 }}</p>
+  <p>{{ about_page.body_text2 }}</p>
  </div>
-
- print(about_description)
  
-{% endblock content%} 
+{% endblock content %} 

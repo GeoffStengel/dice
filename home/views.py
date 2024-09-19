@@ -32,11 +32,12 @@ def pets(request):
 
 
 def about(request):
-    about_description = AboutPage.objects.all()
-    print(about_description)
+    #about_description = AboutPage.objects.all()
+    about_page = AboutPage.objects.first()
 
     context = {
-        'about_page': about_description
+        'about_page': about_page
+
     }   
 
     return render(request, 'home/about.html', context )  

@@ -30,7 +30,7 @@
         display: grid;
         width: 100%;
         height: 100%;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+     
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       /*background: #007bff;
         background: #0056b3;
@@ -42,7 +42,6 @@
         font-family: 'Montserrat', sans-serif;
         text-align: center; 
     }
-    
     
     /***Nav Buttons At Top Of Website***/
     .nav-buttons {
@@ -61,19 +60,20 @@ h1{
     font-size: 22px;
     font-family: 'Montserrat', sans-serif;
     margin: 0 auto;
+    margin-top: 10px;
 }
 
 h1, h2, h3 {
     font-family: 'Dancing Script', cursive;
 }
-    /***Container Wraps Block Content And Main Section Is A Main Grid For Project***/
+    /***Container Wraps Block Content And Is A Main Grid For Project***/
     .container{
         display: grid;
         max-width: 1550px;
-        height: 100%;
+        height:100%;
         grid-template-columns: 1fr;
-        grid-template-rows: 50px 80px 1fr 100px 200px;
-        background: #eaf9fa;
+        grid-template-rows: 50px 80px auto auto 400px auto;
+        /*background: #eaf9fa;*/
         align-items: center;
         justify-content: center;
         margin: 0 auto;
@@ -95,9 +95,12 @@ h1, h2, h3 {
 
     .info_grid{
         display: grid;
-        height:100%;
-        width:100%;
-        margin:0 auto;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        row-gap: 10px;
+        background-color: #f3f3f3;
+        padding: 20px;
     }
 
     .image_grid{
@@ -107,7 +110,6 @@ h1, h2, h3 {
         height:100%;
         width:100%;
         margin:0 auto;
-       
     }
 
 /**To The Actual Image Elements Of The Img Tag**/
@@ -117,30 +119,20 @@ h1, h2, h3 {
     margin: 0 auto;
     margin-top: 5px;
 }
-
-/****Has Posts & Blog Post Titles******/
-.section2{
-    display: grid;
-    height: 300px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(auto-fill, minmax(250px, 1fr, 1fr));
-    margin-top: 20px;
-}
  
-/***Grid Holding Puppy Cards***/
+/***Grid*Holding*Puppy*Card*Adjusts*Cards***/
 .puppy_grid{
     display: grid;
     width: 100%;
     height: 100%;
     grid-template-columns: repeat(auto-fit, 220px);
-    grid-template-rows: repeat(auto-fill, 335px);
+    grid-template-rows: auto;
     margin: 0 auto;
-    margin-top: 15px;
-    grid-gap: 3%;  
-    row-gap:20px;
+    grid-gap: 35px;  
     overflow: hidden;
     justify-content: center;
     align-items: center;
+    padding: 5px;
 }
 
 .puppy_grid div{
@@ -160,20 +152,21 @@ h1, h2, h3 {
     border-radius: 5px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
+
 /**6 Images Puppy Grid**/
 .puppy_grid_6_img{
     display: grid;
     width: 100%;
     height: 100%;
     grid-template-columns: repeat(auto-fit, minmax(210px, 290px));
-    grid-template-rows: repeat(auto-fill, 325px);
+    grid-template-rows: repeat(auto-fill, 340px);
     margin: 0 auto;
-    margin-top: 15px;
     grid-gap: 3%;  
     row-gap:20px;
     overflow: hidden;
     justify-content: center;
     align-items: center;
+    padding: 5px;
 }
 .puppy_grid_6_img div{
     height: 100%;
@@ -193,6 +186,10 @@ h1, h2, h3 {
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
+.names_title_card{
+    background: #003366;
+}
+
 /***The Individual Cards For The Pets***/
 .puppy_item{
     height: 100%;
@@ -208,31 +205,38 @@ h1, h2, h3 {
     line-height: 15px;
 }
 
-.pet_title{
-    font-size: 12px;
-    margin-top: 15px;
+.pet_name {
+    padding-top: 13px;
+    font-weight: bold;
+    color: #494949;
 }
 
-.pet_name {
-    margin-top: 5px;
+.pet_title{
+    font-size: 12px;
+    font-weight: 200;
+    padding: 10px;
+    line-height: 20px;
+    font-weight: 550;
+    color: #616060;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.273);
+   
 }
 
 .card_description{
     display: grid;
     padding-left: 10px;
     font-size: 14px;
-  
 }
 
 .adoption_discount{
     color: red;
     margin: 0 auto;
     font-size: 16px;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-bottom: 5px;
 }
 /***INDEX.HTML*STYLING*END****/
-
+/************************/
 /***PETS.HTML*STYLING*START****/
 .pets_content_grid{
     display: grid;
@@ -266,7 +270,7 @@ h1, h2, h3 {
     border-radius: 10px;
 }
 
-
+/************************/
 /***PETS.HTML*STYLING*START****/  
 /***SlideShow***START*/
 .slideshow-container {
@@ -284,6 +288,7 @@ h1, h2, h3 {
 .header_banner_image {
     width: 100%; /* Full width */
     height: 400px; 
+    margin: 0;
 }
 
 .prev, .next {
@@ -324,7 +329,7 @@ h1, h2, h3 {
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px; /**Space In Between The Columns & Rows**/
     padding: 20px; /* Space inside the container */
-    margin: 20px auto; /* Center the container */
+    margin: 10px auto; /* Center the container */
     max-width: 1100px; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     font-family: 'Montserrat', sans-serif; /* Font choice */
@@ -347,8 +352,8 @@ h1, h2, h3 {
     font-style: italic; /* Italicize the last paragraph for a heartfelt touch */
     color: #555; /* Softer color for the last paragraph */
 }
-
-
+/************************/
+/************************/
 /***ABOUT*CSS*START***/
 .about_body_description{
     background-color: #f9f9f9; /* Light background for contrast */
@@ -367,20 +372,19 @@ h1, h2, h3 {
     margin-bottom: 15px; /* Space between paragraphs */
 }
 /***ABOUT PAGE**CSS*END***/
-
-
-/*****FOOTER*SECTION*START*****/
+/************************/
+/*****FOOTER*SECTION*START**In Base.html*****/
 .footer_grid{
     display: grid;
+    position: absolute;
     width: 100%;
     height: 200px;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto-fill, 30px);
+    grid-template-rows: repeat(auto-fill, auto);
     background: #333;
     align-items: center;
     justify-content: center;
     text-align: right;
-    grid-row: 7;
 }
 
 /**Decorates and Adjusts Text In Footer**/
@@ -389,7 +393,7 @@ h1, h2, h3 {
     color: #f9f9f9;
     text-decoration: none;
     text-align: right;
-    
 }
 
-/***FOOTER*SECTION*START*****/
+/***FOOTER*SECTION*END**In Base.html***/
+/************************/
