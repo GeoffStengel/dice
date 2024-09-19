@@ -1,3 +1,32 @@
 from django.db import models
 
 # Create your models here.
+
+class HomePage(models.Model):
+    sale_banner = models.CharField(max_length=100)
+    body_text = models.TextField()
+    date = models.DateTimeField(auto_now_add=True)
+    lrg_banner = models.ImageField(upload_to='banners/', blank=False, null=False, default='banners/default.jpg')
+    lrg_banner_2 = models.ImageField(upload_to='banners/', blank=False, null=False, default='banners/default.jpg')
+    lrg_banner_3 = models.ImageField(upload_to='banners/', blank=False, null=False, default='banners/default.jpg')
+
+
+class AboutPage(models.Model):
+    body_text = models.TextField()
+
+
+class PetProfile(models.Model):
+    CATEGORY_CHOICES = [
+        ('dog', 'Dog'),
+        ('cat', 'Cat'),
+        ('bird', 'Bird'),
+    ]
+    name = models.CharField(max_length=50)
+    description = models.CharField(max_length=100)
+    located = models.CharField(max_length=50)
+    pet_prof_img = models.ImageField(upload_to='ppi/', blank=False, null=False, default='ppi/pet_default.jpg')
+    category = models.CharField(max_length=10, choices=CATEGORY_CHOICES, default='other')
+
+    def __str__(self):
+        return f"{self.name} (ID: {self.id}) ({self.get_category_display()})"
+

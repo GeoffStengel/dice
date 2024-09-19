@@ -1,4 +1,5 @@
 /***CSS For Main base.html Page***/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Dancing+Script:wght@400;700&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -8,76 +9,95 @@
     body{
         background: #c5d0e4;
         width: 100%;
-        height: 100vh;
-        font-family: monospace;
+        height: 100%;
+        font-family: 'Montserrat', sans-serif;
     }
-    
-    
+    /**
+    .banner{
+        width: 100%;
+        height: 100%;
+        background: #0a84fe;
+    }**/
+    .banner {
+        position: relative;
+        width: 100%;
+        height: 50px; /* Adjust height as needed */
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        transition: background-color 0.5s;
+        cursor: pointer; /* Change cursor to indicate clickability */
+    } 
     /**Nav Bar**/
     nav {
         display: grid;
         width: 100%;
         height: 100%;
-        grid-template-columns: repeat(4, 1fr);
-        background: #6792e2; 
-        text-align: center;
-        justify-content: center;
-        font-size: 16px;
-        margin: 0 auto;
-        font-family: monospace;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      /*background: #007bff;
+        background: #0056b3;
+        background: #003366;
+        background: #87ceeb;
+        background: #00bcd4;*/
+        background: #003366;
+        font-size: 24px;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center; 
     }
     
-    /**Tag Line Or Business Name**/
-    .nav-logo{
-        text-align: center;
-        max-height: 100%;
-        padding: 2px;
-        text-decoration: none;
-        color: black;
-        grid-column: 4;
-    }
     
     /***Nav Buttons At Top Of Website***/
     .nav-buttons {
+        display: flex;
+        max-width: 100rem;
         max-height: 100%;
         padding: 2px;
-        text-justify: center;
+        justify-content: center;
+        align-items: center;
         text-decoration: none;
-        margin: 0 auto;
+        font-weight: bold;
+        color: #eaf9fa;
     }
     
 h1{
+    
     font-size: 22px;
-    font-family: monospace;
+    font-family: 'Montserrat', sans-serif;
     margin: 0 auto;
 }
 
+h1, h2, h3 {
+    font-family: 'Dancing Script', cursive;
+}
     /***Container Wraps Block Content And Main Section***/
     .container{
         display: grid;
-        max-width: 600px;
+        max-width: 1550px;
         height: 100%;
         grid-template-columns: 1fr;
-        grid-template-rows: 50px;
-        background: #b1c3e3;
+        grid-template-rows: 50px 80px 1fr;
+        background: #eaf9fa;
         align-items: center;
         justify-content: center;
         margin: 0 auto;
+        background: #eff0f1dd;
     }
     
+    /***INDEX.HTML*STYLING*START****/
     /***Grid On Home Page Hold main content***/
     .homepage_content_grid{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 30% 70%;
-        height:98%;
-        width:100%;
+        grid-template-rows: repeat(auto-fill, minmax(auto, 1fr));   
+        width: 90%;
         margin:0 auto;
         justify-self: center;
         align-self: center;
-
+        background: #e2edf8;
     }
-
 
     .info_grid{
         display: grid;
@@ -88,9 +108,235 @@ h1{
 
     .image_grid{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
         height:100%;
         width:100%;
         margin:0 auto;
+       
     }
+
+/**To The Actual Image Elements Of The Img Tag**/
+.header_banner_image{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+/****Has Posts & Blog Post Titles******/
+.section2{
+    display: grid;
+    height: 300px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fill, minmax(250px, 1fr, 1fr));
+    margin-top: 20px;
+}
+ 
+/***Grid Holding Puppy Cards***/
+.puppy_grid{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(auto-fit, 210px);
+    grid-template-rows: repeat(auto-fill, 325px);
+    margin: 0 auto;
+    margin-top: 15px;
+    grid-gap: 3%;  
+    row-gap:20px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.puppy_grid div{
+    height: 100%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.puppy_grid img{
+    width: 200px;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 5px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.puppy_item{
+    height: 100%;
+}
+.puppy_item p{
+    text-align: center;
+}
+
+.pet_description{  
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.pet_name {
+    margin-top: 5px;
+}
+
+.card_description{
+    display: grid;
+    padding-left: 10px;
+    font-size: 14px;
+  
+}
+
+.adoption_discount{
+    color: red;
+    margin: 0 auto;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+/***INDEX.HTML*STYLING*END****/
+
+/***PETS.HTML*STYLING*START****/
+.pets_content_grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fill, minmax(auto, 1fr));   
+    width: 90%;
+    margin:0 auto;
+    justify-self: center;
+    align-self: center;
+    background: #e2edf8;    
+}
+
+.all_puppy_grid{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(auto-fit, 210px);
+    grid-template-rows: repeat(auto-fill, 325px);
+    margin: 0 auto;
+    margin-top: 15px;
+    grid-gap: 3%;  
+    row-gap:20px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.all_puppy_grid div{
+    height: 100%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+/***
+.puppy_item{
+    height: 100%;
+}
+.all_puppy_item p{
+    text-align: center;
+}
+***/
+
+/***PETS.HTML*STYLING*START****/  
+
+
+/***SlideShow***START*/
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+}
+
+/**Large Image Banner At Top Of Home Page**/
+.header_banner_image {
+    width: 100%; /* Full width */
+    height: 400px; 
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/***SlideShow***END*/
+
+.home_description {
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Space inside the container */
+    margin: 20px auto; /* Center the container */
+    max-width: 960px; /* Limit width for better readability */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    font-family: 'Montserrat', sans-serif; /* Font choice */
+}
+
+.home_description p {
+    line-height: 1.6; /* Increased line height for readability */
+    font-size: 16px; /* Base font size */
+    color: #333; /* Dark text color for contrast */
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+
+.home_description p:first-of-type {
+    font-weight: bold; /* Make the first paragraph bold */
+    font-size: 18px; /* Slightly larger for emphasis */
+    color: #007bff; /* Highlight color for the first paragraph */
+}
+
+.home_description p:last-of-type {
+    font-style: italic; /* Italicize the last paragraph for a heartfelt touch */
+    color: #555; /* Softer color for the last paragraph */
+}
+
+
+/***ABOUT*CSS*START***/
+.about_body_description{
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Space inside the container */
+    margin: 20px auto; /* Center the container */
+    max-width: 600px; /* Limit width for better readability */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    font-family: 'Montserrat', sans-serif; /* Font choice */
+}
+
+.about_body_description p {
+    line-height: 1.6; /* Increased line height for readability */
+    font-size: 16px; /* Base font size */
+    color: #333; /* Dark text color for contrast */
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+/***ABOUT*CSS*END***/

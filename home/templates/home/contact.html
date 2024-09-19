@@ -1,9 +1,13 @@
 <!--index.html Main Home Page For Website Landing Page-->
 {% extends "home/base.html" %}
-    
+   
     <!--Content Block Blocks Other Content From base.html-->
+    {% block title %} Contact {% endblock title %}
 {% block content%}
 
- <h1>Contact Us</h1>
+ <h1>Contact Us</h1> <title>Contact Us</title>
+
+
+ {% for contact_body in all %} <p>{{ text_body.body_text }}</p> {% endfor %}
 
 {% endblock content%} 
