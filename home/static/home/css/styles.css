@@ -72,7 +72,7 @@ h1, h2, h3 {
         max-width: 1550px;
         height: 100%;
         grid-template-columns: 1fr;
-        grid-template-rows: 50px 80px 1fr 100px;
+        grid-template-rows: 50px 80px 1fr 100px 200px;
         background: #eaf9fa;
         align-items: center;
         justify-content: center;
@@ -372,7 +372,6 @@ h1, h2, h3 {
 /*****FOOTER*SECTION*START*****/
 .footer_grid{
     display: grid;
-    float: right;
     width: 100%;
     height: 200px;
     grid-template-columns: 1fr;
@@ -381,14 +380,16 @@ h1, h2, h3 {
     align-items: center;
     justify-content: center;
     text-align: right;
+    grid-row: 7;
 }
 
 /**Decorates and Adjusts Text In Footer**/
 .footer_grid a{
-    max-width: 1100px;
+    padding-right: 20px;
     color: #f9f9f9;
     text-decoration: none;
     text-align: right;
+    
 }
 
 /***FOOTER*SECTION*START*****/
