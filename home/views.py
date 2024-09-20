@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import HomePage, PetProfile, AboutPage, PrivacyPage
+from .models import HomePage, PetProfile, AboutPage, PrivacyPage, TermsPage
 # Create your views here.
 
 def home(request):
@@ -58,3 +58,12 @@ def privacy(request):
     }
 
     return render(request, 'home/privacy.html', context)
+
+def terms(request):
+    terms_text = TermsPage.objects.first()
+
+    context = {
+        'terms_text': terms_text
+    }
+
+    return render(request, 'home/terms_of_use.html', context)

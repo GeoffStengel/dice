@@ -37,5 +37,8 @@ class PetProfile(models.Model):
 class PrivacyPage(models.Model):
     privacy_text = models.TextField()
 
+
+class TermsPage(models.Model):
+    terms_text = models.TextField()
     
     
