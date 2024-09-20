@@ -33,3 +33,9 @@ class PetProfile(models.Model):
     def __str__(self):
         return f"{self.name} (ID: {self.id}) ({self.get_category_display()})"
 
+
+class PrivacyPage(models.Model):
+    privacy_text = models.TextField()
+
+    
+    

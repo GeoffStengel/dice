@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import HomePage, PetProfile, AboutPage
+from .models import HomePage, PetProfile, AboutPage, PrivacyPage
 # Create your views here.
 
 def home(request):
@@ -49,4 +49,12 @@ def contact(request):
     return render(request, 'home/contact.html')
 
 
+def privacy(request):
+    privacy_text = PrivacyPage.objects.first()
 
+    context = {
+        'privacy_text': privacy_text
+
+    }
+
+    return render(request, 'home/privacy.html', context)

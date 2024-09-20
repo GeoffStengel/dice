@@ -10,6 +10,7 @@ urlpatterns = [
     path('contact/', views.contact, name='home-contact'),
     path('about/', views.about, name='home-about'),
     path('pets/', views.pets, name='home-pets'),
+    path('privacy/', views.privacy, name='home-privacy'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
