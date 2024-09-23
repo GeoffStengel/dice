@@ -7,36 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'home/css/reset.css' %}"/>
     <link rel="stylesheet" href="{% static 'home/css/styles.css' %}"/>
-    <link rel="icon" href="{% static 'home/images/taco_icon.png' %}">
+    <link rel="icon" href="{% static 'home/images/dog_emoji.png' %}">
     {% block title %}<title>Puppy Rescue</title> {% endblock title %}
 </head>
 <body>
  
 <div class="container">
     <header>
-        <div class="banner" id="banner" onclick="handleClick()">Hello World</div>
+    <!--Top Banner Flashes 3 Colors -->
+        <div class="banner" id="banner" onclick="handleClick()"></div>
     </header>
-     <!--        
-    <nav>
+     
+    
+<nav>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+    </div>
+    <div class="nav-links" id="nav-links">
         <a class="nav-buttons" href="{% url 'home-home' %}">Home</a>
         <a class="nav-buttons" href="{% url 'home-pets' %}">Pets</a>
         <a class="nav-buttons" href="{% url 'home-about' %}">About</a>
         <a class="nav-buttons" href="{% url 'home-contact' %}">Contact</a>
-    </nav>-->
-    
-    <nav>
-        <div class="hamburger" onclick="toggleMenu()">
-            <div class="bar bar1"></div>
-            <div class="bar bar2"></div>
-            <div class="bar bar3"></div>
-        </div>
-        <div class="nav-links" id="nav-links">
-            <a class="nav-buttons" href="{% url 'home-home' %}">Home</a>
-            <a class="nav-buttons" href="{% url 'home-pets' %}">Pets</a>
-            <a class="nav-buttons" href="{% url 'home-about' %}">About</a>
-            <a class="nav-buttons" href="{% url 'home-contact' %}">Contact</a>
-        </div>
-    </nav>
+        <a class="nav-buttons" href="#">Donate</a>
+    </div>
+</nav>
 
     {% block content %}
     
@@ -47,6 +43,7 @@
             <a href="{% url 'home-home' %}">Home</a>
             <a href="{% url 'home-pets' %}">Pets</a>
             <a href="{% url 'home-about' %}">About</a>
+            <a href="#">Donate</a>
             <a href="{% url 'home-contact' %}">Contact</a>
             <a href="{% url 'home-terms' %}">Terms of use</a>
             <a href="{% url 'home-privacy' %}">Privacy Policy</a>

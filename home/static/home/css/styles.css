@@ -11,49 +11,85 @@
         width: 100%;
         height: 100%;
         font-family: 'Montserrat', sans-serif;
+        
     }
-    
-    .banner {
-        position: relative;
-        width: 100%;
-        height: 50px; /* Adjust height as needed */
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 18px;
-        transition: background-color 0.5s;
-        cursor: pointer; /* Change cursor to indicate clickability */
-    } 
-    /**Nav Bar**/
-    nav {
-        display: grid;
-        width: 100%;
-        height: 100%;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      /*background: #007bff;
-        background: #0056b3;
-        background: #003366;
-        background: #87ceeb;
-        background: #00bcd4;*/
-        background: #003366;
-        font-size: 24px;
-        font-family: 'Montserrat', sans-serif;
-        text-align: center; 
-    }
-    
-    /***Nav Buttons At Top Of Website***/
-    .nav-buttons {
-        display: flex;
-        max-width: 100rem;
-        max-height: 100%;
-        padding: 2px;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        font-weight: bold;
-        color: #eaf9fa;
-    }
+
+/***AD*BANNER*AT*TOP*OF*SITE*START***/
+.banner {
+    position: relative;
+    width: 100%;
+    height: 50px; /* Adjust height as needed */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: background-color 0.5s;
+    cursor: pointer; /* Change cursor to indicate clickability */
+}
+/***AD*BANNER*AT*TOP*OF*SITE*END***/ 
+
+
+
+
+/**NAVE*BAR*STARTS***/
+nav {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  /*background: #007bff;
+    background: #0056b3;
+    background: #003366;
+    background: #87ceeb;
+    background: #00bcd4;*/
+    background: #003366;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center; 
+
+}
+ 
+
+
+header {
+    position: sticky;  /* Make the header sticky */
+    top: 0;            /* Stick to the top */
+    background-color: white;  /* Ensure visibility */
+    z-index: 1000;    /* Ensure it's above other content */
+}
+
+/***Nav Buttons At Top Of Website***/
+.nav-buttons {
+    display: grid;
+    width: 100%;
+    max-height: 100%;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: #eaf9fa;
+    justify-content: center;
+    grid-template-columns: minmax(200px, auto);
+}
+
+
+
+.nav-links {
+    display: flex;             /* Use flexbox */
+    justify-content: center;   /* Center items */
+    align-items: center;       /* Center vertically */
+    position: absolute;        /* For dropdown effect */
+    top: 70px;                 /* Adjust as needed */
+    left: 50%;                 /* Center horizontally */
+    transform: translateX(-50%); /* Shift back to center */
+    padding: 10px;             /* Optional: padding for menu */
+    border-radius: 5px;        /* Optional: rounded corners */
+}
+
+/***NAVE*BAR*ENDS***/
+
     
 h1{
     font-size: 32px;
@@ -65,52 +101,53 @@ h1{
 h1, h2, h3 {
     font-family: 'Dancing Script', cursive;
 }
-    /***Container Wraps Block Content And Is A Main Grid For Project***/
-    .container{
-        display: grid;
-        max-width: 1550px;
-        height:100%;
-        grid-template-columns: 1fr;
-        grid-template-rows: 50px 80px auto auto auto;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-        background: #eff0f1dd;
-    }
+
+/***Container Wraps Block Content And Is A Main Grid For Project***/
+.container{
+    display: grid;
+    max-width: 1550px;
+    height:100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 80px auto auto auto;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background: #eff0f1dd;
     
-    /***INDEX.HTML*STYLING*START****/
-    /***Grid On Home Page Hold main content***/
-    .homepage_content_grid{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(auto-fit, minmax(auto, 1fr));   
-        width: 90%;
-        margin:0 auto;
-        justify-self: center;
-        align-self: center;
-        background: #e2edf8;
-    }
+}
+    
+/***INDEX.HTML*STYLING*START****/
+/***Grid On Home Page Hold main content***/
+.homepage_content_grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(auto, 1fr));   
+    width: 100%;
+    margin:0 auto;
+    justify-self: center;
+    align-self: center;
+    background: #e2edf8;
+}
 
-    .info_grid{
-        display: grid;
-        height: 100%;
-        width: 100%;
-        margin: 0 auto;
-        row-gap: 20px;
-        background-color: #f3f3f3;
-        padding: 5px;
-        padding-top: 0;
-        align-items: center;
-    }
+.info_grid{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    row-gap: 20px;
+    background-color: #f3f3f3;
+    align-self: center;
+    
+}
 
-    .image_grid{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
-        height:100%;
-        width:100%;
-        margin:0 auto;
-    }
+.image_grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+    height:100%;
+    width:100%;
+    margin:0 auto;
+}
 
 /**To The Actual Image Elements Of The Img Tag**/
 .header_banner_image{
@@ -121,6 +158,7 @@ h1, h2, h3 {
     overflow: hidden;
     border-radius: 10px;
 }
+
  
 /***Grid*Holding*Puppy*Card*Adjusts*Cards***/
 .puppy_grid{
@@ -141,7 +179,6 @@ h1, h2, h3 {
     height: 100%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    
 }
 
 .puppy_grid img{
@@ -161,7 +198,7 @@ h1, h2, h3 {
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 310px));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 310px));
     grid-template-rows: repeat(auto-fill, 340px);
     margin: 0 auto;
     grid-gap: 3.1%;  
@@ -173,7 +210,6 @@ h1, h2, h3 {
 }
 .puppy_grid_6_img div{
     height: 100%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
@@ -244,7 +280,64 @@ h1, h2, h3 {
     margin-top: 10px;
     margin-bottom: 5px;
 }
+
+/**how_to_adopt_puppy_grid****START********/
+/***Grid At Bottom Of Page Above Footer Column Grid***/
+.how_to_adopt_puppy_grid{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+    grid-template-rows: repeat(auto-fit, minmax(400px, 450px));
+    gap: 10%;
+    margin: 0 auto;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 18px;
+    line-height: 35px;
+    padding: 10px;
+}
+.how_to_adopt_puppy_grid div{
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+
+}
+.adoption-steps {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.adoption-steps h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.adoption-steps ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.adoption-steps li {
+    margin: 15px 0;
+    font-size: 18px;
+}
+/**how_to_adopt_puppy_grid****END*****/
+/************************/
+
 /***INDEX.HTML*STYLING*END****/
+/************************/
+
 /************************/
 /***PETS.HTML*STYLING*START****/
 .pets_content_grid{
@@ -328,9 +421,9 @@ h1, h2, h3 {
     display: inline-block;
     transition: background-color 0.6s ease;
 }
-
 /***SlideShow***END*/
 /************************/
+
 /************************/
 /*******Grid*Under*Lrg*Banner*Holds*Text*1*image*START******/
 .home_description {
@@ -376,9 +469,9 @@ h1, h2, h3 {
     width: 100%;
     border-radius: 10px;
 }
-
 /*******Grid*Under*Lrg*Banner***END******/
 /************************/
+
 /************************/
 /***ABOUT*CSS*START***/
 .about_body_description{
@@ -400,65 +493,14 @@ h1, h2, h3 {
 /***ABOUT PAGE**CSS*END***/
 /************************/
 
-/**how_to_adopt_puppy_grid/******START******************/
-/***Grid At Bottom Of Page Above Footer # Column Grid***/
-.how_to_adopt_puppy_grid{
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
-    grid-template-rows: repeat(auto-fit, minmax(400px, 450px));
-    gap: 10%;
-    margin: 0 auto;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-    border-radius: 20px;
-    font-size: 18px;
-    line-height: 35px;
-    padding: 10px;
-}
-.how_to_adopt_puppy_grid div{
-    height: 100%;
-    width: 100%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    padding: 20px;
-    background: #f9f9f9;
 
-}
-.adoption-steps {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: auto;
-    margin-top: 20px;
-}
 
-.adoption-steps h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.adoption-steps ol {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.adoption-steps li {
-    margin: 15px 0;
-    font-size: 18px;
-}
-
-/**how_to_adopt_puppy_grid/******END******************/
 /************************/
 /*****FOOTER*SECTION*START**In Base.html*****/
 .footer_grid{
     display: grid;
     width: 100%;
-    height: 200px;
+    height: 250px;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(auto-fill, auto);
     background: #333;
@@ -473,10 +515,12 @@ h1, h2, h3 {
     color: #f9f9f9;
     text-decoration: none;
     text-align: right;
+   
 }
-
 /***FOOTER*SECTION*END**In Base.html***/
 /************************/
+
+@media screen and (max-width: 1020px){
 /*****Hamburger START*************/
 nav {
     position: relative;
@@ -556,4 +600,13 @@ nav {
 .bar3.active {
     transform: rotate(-45deg) translate(7px, -6px); /* Adjusted for better X shape */
    
+}
+/**NAV*BAR*END**/    
+}
+
+/* Initially hide the hamburger button */
+@media screen and (min-width: 1021px) {
+    .hamburger {
+        display: none; /* Hide hamburger button */
+    }
 }
