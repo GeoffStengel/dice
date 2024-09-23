@@ -9,7 +9,7 @@ def home(request):
     # Fetch all PetProfile objects
     all_pet_profiles = PetProfile.objects.all()
     # Fetch all PetProfile objects
-    six_pet_prof = PetProfile.objects.all()[:6]
+    six_pet_prof = PetProfile.objects.all()[:8]
     # Fetch all PetProfile objects
 
     context = {

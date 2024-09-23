@@ -4,12 +4,13 @@ from django.db import models
 
 class HomePage(models.Model):
     sale_banner = models.CharField(max_length=100)
-    body_text1 = models.TextField()
-    body_text2 = models.TextField(default='Hello')
+    body_text1 = models.CharField(max_length=100)
+    body_text2 = models.CharField(max_length=100)
     date = models.DateTimeField(auto_now_add=True)
     lrg_banner = models.ImageField(upload_to='banners/', blank=False, null=False, default='banners/default.jpg')
     lrg_banner_2 = models.ImageField(upload_to='banners/', blank=False, null=False, default='banners/default.jpg')
     lrg_banner_3 = models.ImageField(upload_to='banners/', blank=False, null=False, default='banners/default.jpg')
+    body_text1_img = models.ImageField(upload_to='banners/', blank=False, null=False, default='banners/default.jpg')
     body_text2_img = models.ImageField(upload_to='banners/', blank=False, null=False, default='banners/default.jpg')
 
 class AboutPage(models.Model):

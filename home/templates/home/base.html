@@ -1,6 +1,5 @@
 <!--So We Can Load In Our Static Directory Which Has Our CSS-->
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,35 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'home/css/reset.css' %}"/>
     <link rel="stylesheet" href="{% static 'home/css/styles.css' %}"/>
-    <link rel="icon" href="{% static 'images/taco_icon.png' %}">
-    
+    <link rel="icon" href="{% static 'home/images/taco_icon.png' %}">
     {% block title %}<title>Puppy Rescue</title> {% endblock title %}
 </head>
 <body>
-
+ 
 <div class="container">
-<header>
-    <div class="banner" id="banner" onclick="handleClick()">Hello World</div>
-    <div></div>
-</header>        
+    <header>
+        <div class="banner" id="banner" onclick="handleClick()">Hello World</div>
+    </header>
+     <!--        
     <nav>
         <a class="nav-buttons" href="{% url 'home-home' %}">Home</a>
         <a class="nav-buttons" href="{% url 'home-pets' %}">Pets</a>
         <a class="nav-buttons" href="{% url 'home-about' %}">About</a>
         <a class="nav-buttons" href="{% url 'home-contact' %}">Contact</a>
+    </nav>-->
+    
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a class="nav-buttons" href="{% url 'home-home' %}">Home</a>
+            <a class="nav-buttons" href="{% url 'home-pets' %}">Pets</a>
+            <a class="nav-buttons" href="{% url 'home-about' %}">About</a>
+            <a class="nav-buttons" href="{% url 'home-contact' %}">Contact</a>
+        </div>
     </nav>
-
 
     {% block content %}
     
     {% endblock %}
     
-        <!--Holds Smaller Sales Banner At Top-->
-    <script src="{% static 'home/js/banner.js' %}"></script>
-    <!--Holds Image SlideShow Banner At Top-->
-    <script src="{% static 'home/js/img_banner.js' %}"></script> 
-
-<div></div>
     <footer>
         <div class="footer_grid">
             <a href="{% url 'home-home' %}">Home</a>
@@ -48,6 +53,12 @@
         </div>
     </footer>
 </div>
-
+        <!--Holds Smaller Sales Banner At Top-->
+        <script src="{% static 'home/js/banner.js' %}"></script>
+        <!--Holds Image SlideShow Banner At Top-->
+        <script src="{% static 'home/js/img_banner.js' %}"></script> 
+        <!--Holds Hamburger Button-->
+        <script src="{% static 'home/js/hamburger.js' %}"></script> 
+    
 </body>
-</html>
+</html> 

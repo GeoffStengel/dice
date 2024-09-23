@@ -47,33 +47,77 @@
                     </div>
                     <!-- Optional: Dots for slideshow-Start-->
                 
-                <!--2nd-Large-Body-Of-Text-Also-Has-Image-START-->    
-                <div class='home_description'>
-                <div class="body_text1">    
-                    {% for text_body in all %} <p>{{ text_body.body_text1 }}</p> {% endfor %}
-                </div>
-                <div class="body_text2">
-                    {% for text_body in all %} <p>{{ text_body.body_text2 }}</p> {% endfor %}
-                    
-                        <img class="body_text2_img" src="{{ all.0.body_text2_img.url }}" alt="Doggy Image">
-                     
-                </div>
-                <!--2nd-Large-Body-Of-Text-Also-Has-Image-END-->      
+    <!--2nd-Large-Body-Of-Text-Also-Has-Image-START-->    
+    <div class='home_description'>
+    <div class="body_text1">    
+        {% for text_body in all %} <p>{{ text_body.body_text1 }}</p> {% endfor %}
+        <img class="body_text2_img" src="{{ all.0.body_text1_img.url }}" alt="Doggy Image">
+    </div>
+    <div class="body_text2">
+        {% for text_body in all %} <p>{{ text_body.body_text2 }}</p> {% endfor %}
+        
+            <img class="body_text2_img" src="{{ all.0.body_text2_img.url }}" alt="Doggy Image">
+         
+    </div>
+    <!--2nd-Large-Body-Of-Text-Also-Has-Image-END-->      
  
 </div>         
 
-                <!-- Pet Profiles Section -->
-                <div class="puppy_grid_6_img">
-                    {% for pet in six_pets %}
-                        <div class="puppy_item">
-                            <img src="{{ pet.pet_prof_img.url }}" alt="Puppy Pic 1">
-                            
-                                <p class="pet_name">{{ pet.name }}</p>
-                                <p class="pet_title">{{ pet.title }}</p>
-                                
-                        </div>
-                    {% endfor %}
-                </div>
+    <!-- Pet-Profiles-Section-START-->
+    <div class="puppy_grid_6_img">
+        {% for pet in six_pets %}
+            <div class="puppy_item">
+                <img src="{{ pet.pet_prof_img.url }}" alt="Puppy Pic 1">
+                    <p class="pet_name">{{ pet.name }}</p>
+                    <p class="pet_title">{{ pet.title }}</p>
+            </div>
+        {% endfor %}
+    </div>
+                <!-- Pet-Profiles-Section-END-->
+<br>
+
+    <!---How-To-Adopt-Puppy-Section-START-->
+
+    <div class="adoption-steps">
+        <h2>Three Steps to Adopting a Pet</h2>
+        <ol>
+            <li>
+                <span>🐾</span> <strong>Choose Your Pet:</strong> Research different breeds and visit local shelters.
+            </li>
+            <li>
+                <span>📝</span> <strong>Complete the Application:</strong> Fill out an adoption application and provide references.
+            </li>
+            <li>
+                <span>🏠</span> <strong>Welcome Your New Friend:</strong> Prepare your home and schedule a vet visit.
+            </li>
+        </ol>
+    </div>
+
+
+    <div class="how_to_adopt_puppy_grid">
+        <div>
+            <p>Hello World</p>
+            <p>Step 1 To adopt puppy</p>
+            <p><span>🐾</span> <strong>Choose Your Pet:</strong>    - Research different breeds and their needs.
+                - Visit local shelters or rescue organizations.
+                - Spend time with pets to find the right match.</p>
+        </div>
+        <div>    
+            <p>Hello World</p>
+            <p>Step 2 To adopt puppy</p>
+            - Fill out an adoption application.
+            - Provide references and necessary documentation.
+            - Attend an interview or home visit if required.
+        </div>
+        <div>    
+            <p>Hello World</p>
+            <p>Step 3 To adopt puppy</p>
+            - Prepare your home with necessary supplies (food, bed, toys).
+            - Gradually introduce your new pet to their environment.
+            - Schedule a vet visit for a health check-up and vaccinations.
+        </div>
+    </div>
+<!---How-To-Adopt-Puppy-Section-END-->
         </div>         
     </div>  
 

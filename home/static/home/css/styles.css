@@ -7,7 +7,7 @@
     
     /***Body Of The Website***/
     body{
-        background: #c5d0e4;
+        background: #ffffff;
         width: 100%;
         height: 100%;
         font-family: 'Montserrat', sans-serif;
@@ -30,7 +30,6 @@
         display: grid;
         width: 100%;
         height: 100%;
-     
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       /*background: #007bff;
         background: #0056b3;
@@ -72,8 +71,7 @@ h1, h2, h3 {
         max-width: 1550px;
         height:100%;
         grid-template-columns: 1fr;
-        grid-template-rows: 50px 80px auto auto 400px auto;
-        /*background: #eaf9fa;*/
+        grid-template-rows: 50px 80px auto auto auto;
         align-items: center;
         justify-content: center;
         margin: 0 auto;
@@ -85,7 +83,7 @@ h1, h2, h3 {
     .homepage_content_grid{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(auto-fill, minmax(auto, 1fr));   
+        grid-template-rows: repeat(auto-fit, minmax(auto, 1fr));   
         width: 90%;
         margin:0 auto;
         justify-self: center;
@@ -98,9 +96,11 @@ h1, h2, h3 {
         height: 100%;
         width: 100%;
         margin: 0 auto;
-        row-gap: 10px;
+        row-gap: 20px;
         background-color: #f3f3f3;
-        padding: 20px;
+        padding: 5px;
+        padding-top: 0;
+        align-items: center;
     }
 
     .image_grid{
@@ -118,6 +118,8 @@ h1, h2, h3 {
     width: 100%;
     margin: 0 auto;
     margin-top: 5px;
+    overflow: hidden;
+    border-radius: 10px;
 }
  
 /***Grid*Holding*Puppy*Card*Adjusts*Cards***/
@@ -125,7 +127,7 @@ h1, h2, h3 {
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: repeat(auto-fit, 220px);
+    grid-template-columns: repeat(auto-fit, 230px);
     grid-template-rows: auto;
     margin: 0 auto;
     grid-gap: 35px;  
@@ -139,6 +141,7 @@ h1, h2, h3 {
     height: 100%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    
 }
 
 .puppy_grid img{
@@ -158,22 +161,24 @@ h1, h2, h3 {
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 290px));
+    grid-template-columns: repeat(auto-fit, minmax(210px, 310px));
     grid-template-rows: repeat(auto-fill, 340px);
     margin: 0 auto;
-    grid-gap: 3%;  
-    row-gap:20px;
+    grid-gap: 3.1%;  
     overflow: hidden;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
     padding: 5px;
 }
 .puppy_grid_6_img div{
     height: 100%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
 
+/*profile image for puppy card*/
 .puppy_grid_6_img img{
     width: 200px;
     height: 250px;
@@ -193,10 +198,15 @@ h1, h2, h3 {
 /***The Individual Cards For The Pets***/
 .puppy_item{
     height: 100%;
-    background-color: #f0f1f1;
+    background-color: #f9f9f9;
+    border: 2px solid #e2e2e2;
+    padding: 5px;
 }
 .puppy_item p{
     text-align: center;
+}
+.puppy_item img{
+    margin-top: 15px;
 }
 
 .pet_description{  
@@ -219,7 +229,6 @@ h1, h2, h3 {
     font-weight: 550;
     color: #616060;
     text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.273);
-   
 }
 
 .card_description{
@@ -321,16 +330,18 @@ h1, h2, h3 {
 }
 
 /***SlideShow***END*/
-
+/************************/
+/************************/
+/*******Grid*Under*Lrg*Banner*Holds*Text*1*image*START******/
 .home_description {
     display: grid;
     background-color: #f9f9f9; /* Light background for contrast */
     border-radius: 10px; 
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10px; /**Space In Between The Columns & Rows**/
-    padding: 20px; /* Space inside the container */
+    grid-gap: 10%; /**Space In Between The Columns & Rows**/
+    padding: 40px; /* Space inside the container */
     margin: 10px auto; /* Center the container */
-    max-width: 1100px; 
+    max-width: 1350px; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     font-family: 'Montserrat', sans-serif; /* Font choice */
 }
@@ -352,6 +363,21 @@ h1, h2, h3 {
     font-style: italic; /* Italicize the last paragraph for a heartfelt touch */
     color: #555; /* Softer color for the last paragraph */
 }
+
+/**Image*in*Text*Grid*Under*Banner**/
+/**Columm*1**In*Text*Grid*Under*Banner**/
+.body_text1, .body_text2{
+   padding: 5%;
+   padding-top: 0;
+   text-align: center;
+}
+/**Columm*2**In*Text*Grid*Under*Banner**/
+.body_text2_img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+/*******Grid*Under*Lrg*Banner***END******/
 /************************/
 /************************/
 /***ABOUT*CSS*START***/
@@ -373,10 +399,64 @@ h1, h2, h3 {
 }
 /***ABOUT PAGE**CSS*END***/
 /************************/
+
+/**how_to_adopt_puppy_grid/******START******************/
+/***Grid At Bottom Of Page Above Footer # Column Grid***/
+.how_to_adopt_puppy_grid{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+    grid-template-rows: repeat(auto-fit, minmax(400px, 450px));
+    gap: 10%;
+    margin: 0 auto;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 18px;
+    line-height: 35px;
+    padding: 10px;
+}
+.how_to_adopt_puppy_grid div{
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+
+}
+.adoption-steps {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.adoption-steps h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.adoption-steps ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.adoption-steps li {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+/**how_to_adopt_puppy_grid/******END******************/
+/************************/
 /*****FOOTER*SECTION*START**In Base.html*****/
 .footer_grid{
     display: grid;
-    position: absolute;
     width: 100%;
     height: 200px;
     grid-template-columns: 1fr;
@@ -397,3 +477,83 @@ h1, h2, h3 {
 
 /***FOOTER*SECTION*END**In Base.html***/
 /************************/
+/*****Hamburger START*************/
+nav {
+    position: relative;
+}
+
+.hamburger {
+    cursor: pointer;
+    width: 35px;
+    height: 30px;
+    position: relative;
+    margin: 10px;
+}
+
+.bar {
+    height: 5px;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+}
+
+.bar1 {
+    background: #ff3d00; /* Orange */
+}
+
+.bar2 {
+    background: #00c853; /* Green */
+}
+
+.bar3 {
+    background: #2979ff; /* Blue */
+}
+
+.nav-links {
+    display: none;
+    position: absolute;
+    top: 50px; /* Adjust as needed */
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    z-index: 1000;
+    opacity: 0; /* Start hidden */
+    transform: translateY(-10px); /* Initial position */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links.show {
+    display: block;
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Move to original position */
+}
+
+.nav-buttons {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-buttons:hover {
+    background: #f0f0f0;
+    color: #000;
+}
+
+/* Animation for the bars */
+.bar1.active {
+    transform: rotate(45deg) translate(6px, 6px); /* Adjusted for better X shape */
+    width: 34px;
+}
+
+.bar2.active {
+    opacity: 0; /* Fade out */
+}
+
+.bar3.active {
+    transform: rotate(-45deg) translate(7px, -6px); /* Adjusted for better X shape */
+   
+}
