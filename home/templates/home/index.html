@@ -2,9 +2,9 @@
 {% extends "home/base.html" %}
 {% load static %}
 
-<div class="wrapper">
-         <!--Content Block Blocks Other Content From base.html-->
-    {% block content %}
+
+<!--Content Block Blocks Other Content From base.html-->
+{% block content %}
      
     <div class="homepage_content_grid">
         <div class="info_grid">
@@ -31,7 +31,7 @@
                                 </div>
                             </div>
                         {% endfor %}
-                        <!--Header-Image-Banner-Start-->
+                        <!--Header-Image-Banner-END-->
 
                         <!-- Navigation-buttons-For-Image-Banner-Start-->
                         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -51,7 +51,7 @@
     <div class='home_description'>
     <div class="body_text1">    
         {% for text_body in all %} <p>{{ text_body.body_text1 }}</p> {% endfor %}
-        <img class="body_text2_img" src="{{ all.0.body_text1_img.url }}" alt="Doggy Image">
+        <img class="body_text1_img" src="{{ all.0.body_text1_img.url }}" alt="Doggy Image">
     </div>
     <div class="body_text2">
         {% for text_body in all %} <p>{{ text_body.body_text2 }}</p> {% endfor %}
@@ -74,7 +74,7 @@
         {% endfor %}
     </div>
                 <!-- Pet-Profiles-Section-END-->
-<br>
+
 
     <!---How-To-Adopt-Puppy-Section-START-->
 
@@ -118,9 +118,45 @@
         </div>
     </div>
 <!---How-To-Adopt-Puppy-Section-END-->
-        </div>         
-    </div>  
+<!---->
 
-    {% endblock content%} 
+<!---->
+<!---SPONSOR_GRID-START-->
+
+<div class="sponsor_grid">
+    <div class="thank_U_sponsors_img">
+        <img src="{% static 'home/images/husky_01.jpg' %}" alt="husky">
+    </div>
+    <div class="sponsor_logos_grid">
+        <div class="box box1">
+            <img  src="{% static 'home/images/petsmart_400x100.png' %}">
+        </div>
+        <div class="box box2">
+            <img src="{% static 'home/images/petco_icon.png' %}" alt="petsmart logo">
+        </div>
+        <div class="box box3">
+            <img src="{% static 'home/images/petsmart_icon.png' %}">
+        </div>
+        <div class="box box4">    
+            <img src="{% static 'home/images/petco_foundation_icon.png' %}">
+        </div>
+        <div class="box box5">        
+            <img src="{% static 'home/images/walmart_icon.png' %}">
+        </div>    
+        <div class="box box6">    
+            <img src="{% static 'home/images/habitat_icon.png' %}">
+        </div>    
+        <div class="box box7">        
+            <img src="{% static 'home/images/purina_icon.png' %}">
+        </div>    
+    </div>
+</div>
+<!---SPONSOR_GRID-END-->
+<!---->
+
+    </div>         
 </div>  
+
+{% endblock content%} 
+
  
