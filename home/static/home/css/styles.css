@@ -61,7 +61,9 @@ nav {
 /***Container Wraps Block Content And Is A Main Grid For Project***/
 .container{
     display: grid;
-    width: 100%;
+   /*** width: 100%; ***/
+   max-width: 1500px; /* Set max-width to desired value */
+   width: 100%;       /* Allow it to take full width up to max-width */
     height:100%;
     grid-template-columns: 1fr;
     grid-template-rows: 50px 80px auto auto auto auto;
