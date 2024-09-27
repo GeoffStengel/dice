@@ -25,7 +25,6 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-
 /**NAVE*BAR*STARTS***/
 header {
     position: sticky;  /* Make the header sticky */
@@ -44,6 +43,16 @@ nav {
     text-align: center; 
 }
  
+#pd_logo{
+    width: 60px;
+    border-radius: 12px;
+    top: 0;
+    left: 0;
+    padding: 6px;
+    margin: 10px;
+    align-content: center;
+}
+
 /***AD*BANNER*AT*TOP*OF*SITE*START***/
 .banner {
     position: relative;
@@ -331,7 +340,6 @@ h1, h2, h3 {
     border-radius: 20px;
     padding: 20px;
     background: var(--card-bkgd);
-
 }
 .adoption-steps {
     background-color: var(--card-bkgd);
@@ -340,7 +348,6 @@ h1, h2, h3 {
     box-shadow: var(--box-shadow-light);
     max-width: 600px;
     margin: auto;
- 
 }
 
 .adoption-steps h2 {
@@ -378,6 +385,7 @@ h1, h2, h3 {
 .thank_U_sponsors_img{
     background: var(--card-bkgd);
     margin: 0 auto;
+    width: 100%;
 }
 
 .sponsor_logos_grid {
@@ -558,7 +566,13 @@ h1, h2, h3 {
 /***ABOUT PAGE**CSS*END***/
 /************************/
 
-
+#pd_logo {
+    width: 60px;
+    border-radius: 10px;
+    position: absolute; /* Ensure the logo is positioned relative to the nearest positioned ancestor */
+    top: 50px;
+    left: 2%;
+}
 
 /************************/
 /*****FOOTER*SECTION*START**In Base.html*****/
@@ -601,19 +615,14 @@ h1, h2, h3 {
 }
 
 @media screen and (max-width: 1200px){
- /**Grid*Holding*Logo*Grid*& Sponsor Thank You Image Grid*/   
-.sponsor_grid{
-    display: grid;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    margin:0 auto;
-    align-items: center;
-    justify-items: center;
 
- }
+ .thank_U_sponsors_img img{
+    width: 400px;
+}
+
+ #pd_logo {
+ display: none;
+}
 }
 
 @media screen and (max-width: 1020px){
@@ -697,7 +706,6 @@ nav {
     transform: rotate(-45deg) translate(7px, -6px); /* Adjusted for better X shape */
  }
 }
-/**NAV*BAR*END**/
 
 /* Initially hide the hamburger button */
 @media screen and (min-width: 1021px) {
@@ -705,6 +713,7 @@ nav {
         display: none; /* Hide hamburger button */
     }
 }
+/**NAV*BAR*END**/
 
 @media (max-width: 850px) {
     /*******Grid*Under*Lrg*Banner*Holds*Text*1*image*START******/
@@ -721,7 +730,22 @@ nav {
         row-gap: 10px;  
         align-self: center;
     } 
-    }
+ /**Grid*Holding*Logo*Grid*& Sponsor Thank You Image Grid*/
+.sponsor_grid{
+    max-width: 900px;
+    height: 100%;
+    padding: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+ }
+ .thank_U_sponsors_img{
+    width: 400px;
+    margin: 0 auto;
+    justify-self: center;
+}    
+}
 
 @media (max-width: 700px) {
 /*******Grid*Under*Lrg*Banner*Holds*Text*1*image*START******/
@@ -729,50 +753,151 @@ nav {
     grid-template-columns: 1fr;
     grid-gap: 2%; /**Space In Between The Columns & Rows**/
     padding: 40px; /* Space inside the container */
-}  
+ }
+
 }
 
-@media (max-width: 620px) {
-    .home_description { 
-        grid-gap: 10px; /**Space In Between The Columns & Rows**/
-        padding: 0; /* Space inside the container */
-        background: #007bff;
-        width: 100%;
-        font-size: 12px;
-    } 
-    /*******Grid*Under*Lrg*Banner*Holds*Text*1*image*START******/
-    .home_description img {
-        width: 75%;               /* Set the width of the image */
-        max-width: 100%;          /* Ensure it doesn’t exceed the container width */
-        height: auto;             /* Maintain aspect ratio */
-        justify-self: center;     /* Center the image in the grid */
-        display: block;           /* Ensure it behaves like a block element */
-        margin: 0 auto;          /* Center the image horizontally */
-    }
-    /**Image*in*Text*Grid*Under*Banner**/
+@media (max-width: 650px) {
+.home_description { 
+    grid-gap: 10px; /**Space In Between The Columns & Rows**/
+    padding: 0; /* Space inside the container */
+    width: 100%;
+ 
+} 
+/*******Grid*Under*Lrg*Banner*Holds*Text*1*image*START******/
+.home_description img {
+    width: 100%;               /* Set the width of the image */
+    max-width: 100%;          /* Ensure it doesn’t exceed the container width */
+    height: auto;             /* Maintain aspect ratio */
+    justify-self: center;     /* Center the image in the grid */
+    display: block;           /* Ensure it behaves like a block element */
+    margin: 0 auto;          /* Center the image horizontally */
+}
+/**Image*in*Text*Grid*Under*Banner**/
+
+.home_description p {
+    line-height: 1.6; /* Increased line height for readability */
+    font-size: 12px; /* Base font size */
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+
+
 /**Columm*1**In*Text*Grid*Under*Banner**/
-.body_text1 p, .body_text2{
-    padding: 2%;
-    padding-top: 0;
+.body_text1 p, .body_text2 p{
+    padding: 0;
     text-align: center;
     font-size: 10px;
  }
- 
- /**Columm*2**In*Text*Grid*Under*Banner**/
- .body_text2_img{
-    
-     border-radius: 10px;
+ .body_text1{
+    padding: 0;
+    margin: 0;
  }
-
- /*******Grid*Under*Lrg*Banner***END******/ 
- .body_text2 { 
-   font-size: 12px;
+}
+@media screen and (max-width: 568px) {
+.adoption-steps{
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+}
+@media screen and (max-width: 480px) {
+.home_description { 
+    grid-gap: 10px; /**Space In Between The Columns & Rows**/
+    padding: 0; /* Space inside the container */
+    width: 100%;
 } 
-.body_text2 p{ 
+/*******Grid*Under*Lrg*Banner*Holds*Text*1*image*START******/
+.home_description img {
+    width: 100%;               /* Set the width of the image */
+           /* Ensure it doesn’t exceed the container width */
+    height: auto;             /* Maintain aspect ratio */
+    justify-self: center;     /* Center the image in the grid */
+    display: block;           /* Ensure it behaves like a block element */
+         
+}
+/**Image*in*Text*Grid*Under*Banner**/
+
+.home_description p {
+    line-height: 1.6; /* Increased line height for readability */
+    font-size: 12px; /* Base font size */
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+.body_text1 p{
     font-size: 12px;
- } 
 }
 
-@media (max-width: 480px) {
- 
+.adoption-steps li{
+    margin: 15px 0;
+    font-size: 14px;
+}
+.adoption-steps {
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.adoption-steps h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.adoption-steps ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+/**Large Image Banner At Top Of Home Page**/
+.header_banner_image {
+    width: 100%; /* Full width */
+    height: 200px; 
+    margin: 0;
+}
+.info_grid{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    row-gap: 0;
+    align-self: center;
+}
+/***Grid At Bottom Of Page Above Footer Column Grid***/
+.how_to_adopt_puppy_grid{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+    grid-template-rows: repeat(auto-fit, minmax(400px, 450px));
+    gap: 2%;
+    margin: 0 auto;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 18px;
+    line-height: 35px;
+    padding: 10px;
+}
+.how_to_adopt_puppy_grid div{
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    background: var(--card-bkgd);
+}
+ /**Grid*Holding*Logo*Grid*& Sponsor Thank You Image Grid*/
+ .sponsor_grid{
+    max-width: 100%;
+    height: 100%;
+    padding: 0;
+ }
+ .sponsor_logos_grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 125px);
+    grid-gap: 10px;
+}
+.adoption_discount{
+    margin-bottom: 5px;
+}
+}
+@media screen and (max-width: 325px) {
+.header_banner_image {
+    width: 100%; /* Full width */
+    height: 150px; 
+    margin: 0;
+}
 }

@@ -19,6 +19,8 @@
     </header>
      
     
+        
+    
 <nav>
     <div class="hamburger" onclick="toggleMenu()">
         <div class="bar bar1"></div>
@@ -32,6 +34,7 @@
         <a class="nav-buttons" href="{% url 'home-contact' %}">Contact</a>
         <a class="nav-buttons donate_button" href="#">Donate</a>
     </div>
+   <img id="pd_logo" src="{% static 'home/images/pd_logo_100x100.png' %}" alt="Pauls Dogs Logo">
 </nav>
 
     {% block content %}
